@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="nl.afas.cordova.plugin.chromeCastRemoteDisplay" version="0.0.1">
+
+    <name>Chomecast Remote display plugin</name>
+    <description>Chomecast Remote display plugin</description>
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/plugins.chromeCastRemoteDisplay.js" name="ChromeCastRemoteDisplay">
+        <clobbers target="cordova.plugins.ChromeCastRemoteDisplay" />
+    </js-module>
+
+    <!-- Android -->
+    <platform name="android">
+        <source-file src="src/android/nl/afas/cordova/plugin/chromeCastRemoteDisplay/ChromeCastRemoteDisplay.java" target-dir="src/nl/afas/cordova/plugin/shomecastRemoteDisplay" />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ChromeCastRemoteDisplay">
+                <param name="android-package" value="nl.afas.cordova.plugin.chromeCastRemoteDisplay.ChromeCastRemoteDisplay" />
+            </feature>
+        </config-file>
+    </platform>
+
+    <!-- iOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ChromeCastRemoteDisplay">
+                <param name="ios-package" value="ChromeCastRemoteDisplay" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/ChromeCastRemoteDisplay.m" />
+        <header-file src="src/ios/ChromeCastRemoteDisplay.h" />
+    </platform>
+
+	
+</plugin>

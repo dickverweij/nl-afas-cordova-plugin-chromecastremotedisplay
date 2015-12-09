@@ -1,32 +1,7 @@
-Chromecast remote display (IOS/Android) plugin for Cordova
-==========================
-This plugin will cast your cordova app to a chromecast
-
-Requirements
--------------
-- Android 4.3 or higher / iOS 6 or higher
-- Cordova 3.0 or higher
-
-    Installation
--------------
-    cordova plugin add https://github.com/dickverweij/nl-afas-cordova-plugin-chromeCastRemoteDisplay
-
-Usage
-------
-   
-    var sessions = cordova.chromeCastRemoteDisplay.getChromeCastSessions(chromeCastPublishId);
-
-	pickedSession = sessions[x];
-
-    cordova.chromeCastRemoteDisplay.startCast(pickedSession);
-	cordova.chromeCastRemoteDisplay.endCast(pickedSession);
-
-
-LICENSE
---------
+/*
 The MIT License (MIT)
 
-Copyright (c) 2015 dickydick1969@hotmail.com Dick Verweij AFAS Software BV - d.verweij@afas.nl
+Copyright (c) 2015 Dick Verweij dickydick1969@hotmail.com, d.verweij@afas.nl
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -44,3 +19,16 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+#import <Cordova/CDV.h>
+
+@interface FileOpener2 : CDVPlugin <UIDocumentInteractionControllerDelegate> {
+    NSString *localFile;
+}
+
+@property(nonatomic, strong) UIDocumentInteractionController *controller;
+
+- (void) open: (CDVInvokedUrlCommand*)command;
+
+@end

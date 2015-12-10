@@ -23,8 +23,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import <Cordova/CDV.h>
 
-@interface FileOpener2 : CDVPlugin <UIDocumentInteractionControllerDelegate> {
-    NSString *localFile;
+@interface ChromeCastRemoteDisplay : CDVPlugin <UIDocumentInteractionControllerDelegate> {
 }
 
 @property(nonatomic, strong) UIDocumentInteractionController *controller;

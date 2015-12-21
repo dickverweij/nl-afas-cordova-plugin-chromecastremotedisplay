@@ -27,11 +27,30 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #import <MobileCoreServices/MobileCoreServices.h>
 
 @implementation ChromeCastRemoteDisplay
-@synthesize controller = docController;
 
-- (void) open: (CDVInvokedUrlCommand*)command {
+- (void) getSessions: (CDVInvokedUrlCommand*)command {
 
+    CDVPluginResult * pluginResult;
+    NSString * result = nil;
+
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:result];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId: command.callbackId];
+}
+
+- (void) startCast: (CDVInvokedUrlCommand*)command {
+	CDVPluginResult * pluginResult;
+    NSString * result = nil;
     
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:result];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId: command.callbackId];
+}
+
+- (void) endCast: (CDVInvokedUrlCommand*)command {
+	CDVPluginResult * pluginResult;
+    NSString * result = nil;
+    
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:result];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId: command.callbackId];
 }
 
 @end

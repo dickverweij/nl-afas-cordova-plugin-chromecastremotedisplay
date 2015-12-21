@@ -23,11 +23,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import <Cordova/CDV.h>
 
-@interface ChromeCastRemoteDisplay : CDVPlugin <UIDocumentInteractionControllerDelegate> {
+@interface ChromeCastRemoteDisplay : CDVPlugin{
 }
 
-@property(nonatomic, strong) UIDocumentInteractionController *controller;
-
-- (void) open: (CDVInvokedUrlCommand*)command;
-
+- (void) getSessions: (CDVInvokedUrlCommand*)command;
+- (void) startCast: (CDVInvokedUrlCommand*)command;
+- (void) endCast: (CDVInvokedUrlCommand*)command;
 @end

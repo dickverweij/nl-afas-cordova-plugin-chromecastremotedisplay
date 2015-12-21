@@ -42,6 +42,6 @@ ChromeCastRemoteDisplay.prototype.endCast = function (session) {
     });
 };
 
-window.ChromeCastRemoteDisplay = new ChromeCastRemoteDisplay();
+cordova.ChromeCastRemoteDisplay = new ChromeCastRemoteDisplay();
 
 

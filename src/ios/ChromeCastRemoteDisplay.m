@@ -22,6 +22,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 #import "ChromeCastRemoteDisplay.h"
 #import <Cordova/CDV.h>
+#import <GoogleCast/GoogleCast.h>
 
 #import <QuartzCore/QuartzCore.h>
 #import <MobileCoreServices/MobileCoreServices.h>

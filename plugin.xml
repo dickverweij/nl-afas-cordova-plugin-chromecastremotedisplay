@@ -32,6 +32,11 @@
         </config-file>
         <source-file src="src/ios/ChromeCastRemoteDisplay.m" />
         <header-file src="src/ios/ChromeCastRemoteDisplay.h" />
+
+        <framework src="src/ios/Frameworks/GoogleCast.framework" custom="true"/>
+        <framework src="SystemConfiguration.framework"/>
+        <framework src="MediaAccessibility.framework"/>
+        <framework src="CoreText.framework"/>
     </platform>
 
 	

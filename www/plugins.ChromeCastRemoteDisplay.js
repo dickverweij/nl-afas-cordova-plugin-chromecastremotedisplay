@@ -24,21 +24,15 @@ var exec = require('cordova/exec');
 
 function ChromeCastRemoteDisplay() { }
 
-ChromeCastRemoteDisplay.prototype.getSessions = function (publishId) {
+ChromeCastRemoteDisplay.prototype.startCast = function (publishId) {
     return new Promise(function (resolve, reject) {
-        exec(resolve, reject, 'ChromeCastRemoteDisplay', 'getSessions', [publishId]);
+        exec(resolve, reject, 'ChromeCastRemoteDisplay', 'startCast', [publishId]);
     });
 };
 
-ChromeCastRemoteDisplay.prototype.startCast = function (session) {
+ChromeCastRemoteDisplay.prototype.endCast = function () {
     return new Promise(function (resolve, reject) {
-        exec(resolve, reject, 'ChromeCastRemoteDisplay', 'startCast', [session]);
-    });
-};
-
-ChromeCastRemoteDisplay.prototype.endCast = function (session) {
-    return new Promise(function (resolve, reject) {
-        exec(resolve, reject, 'ChromeCastRemoteDisplay', 'endCast', [session]);
+        exec(resolve, reject, 'ChromeCastRemoteDisplay', 'endCast', []);
     });
 };
 

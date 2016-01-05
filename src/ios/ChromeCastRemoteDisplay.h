@@ -22,11 +22,20 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 #import <Cordova/CDV.h>
+#import "ChromecastDeviceController.h"
+#import <GoogleCastRemoteDisplay/GCKRemoteDisplayChannel.h>
+#import <GoogleCastRemoteDisplay/GCKViewVideoFrameInput.h>
 
-@interface ChromeCastRemoteDisplay : CDVPlugin{
+
+@interface ChromeCastRemoteDisplay : CDVPlugin<ChromecastDeviceControllerDelegate,GCKRemoteDisplayChannelDelegate>{
+    NSInteger activeDevices;
+    GCKViewVideoFrameInput * _castInput;
+    Boolean didConnect;
+    NSString * callbackId;
 }
 
-- (void) getSessions: (CDVInvokedUrlCommand*)command;
 - (void) startCast: (CDVInvokedUrlCommand*)command;
+
 - (void) endCast: (CDVInvokedUrlCommand*)command;
+
 @end

@@ -29,30 +29,12 @@ import org.json.JSONArray;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-public class ChromeCastRemoteDisplay extends CordovaPlugin {
-
-    public class ChromeCastRemoteDisplayException extends Exception{
-        public ChromeCastRemoteDisplayException(String message){
-            super(message);
-        }
-        public ChromeCastRemoteDisplayException(String message,Exception ex){
-            super(message,ex);
-        }
-    }
+public class ChromeCastRemoteDisplay extends CordovaPlugin {  
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
-        boolean foundMethod = false;
-        try {
-        } catch (ChromeCastRemoteDisplayException ex) {
-            StringWriter sw = new StringWriter();
-            PrintWriter pw = new PrintWriter(sw);
-            ex.printStackTrace(pw);
-            pw.close();
-            throw new JSONException(sw.toString());
-        }
-
+        boolean foundMethod = false;        
         return foundMethod;
     }
 

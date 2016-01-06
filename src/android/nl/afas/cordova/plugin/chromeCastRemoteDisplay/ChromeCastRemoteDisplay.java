@@ -25,6 +25,7 @@ package nl.afas.cordova.plugin.chromeCastRemoteDisplay;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 import org.json.JSONException;
+import org.json.JSONArray;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 

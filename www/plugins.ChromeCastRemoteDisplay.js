@@ -36,6 +36,6 @@ ChromeCastRemoteDisplay.prototype.endCast = function () {
     });
 };
 
-cordova.ChromeCastRemoteDisplay = new ChromeCastRemoteDisplay();
+modelue.exprots = new ChromeCastRemoteDisplay();
 
 

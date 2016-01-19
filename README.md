@@ -1,26 +1,28 @@
-Chromecast remote display (IOS/Android) plugin for Cordova
+Chromecast remote display (IOS) plugin for Cordova
 ==========================
 This plugin will cast your cordova app to a chromecast
 
 Requirements
 -------------
-- Android 4.3 or higher / iOS 6 or higher
+- iOS 6 or higher
 - Cordova 3.0 or higher
 
     Installation
 -------------
-    cordova plugin add https://github.com/dickverweij/nl-afas-cordova-plugin-chromeCastRemoteDisplay
+    cordova plugin add nl-afas-cordova-plugin-chromecastremotedisplay
+
+
 
 Usage
 ------
    
-    var sessions = cordova.chromeCastRemoteDisplay.getChromeCastSessions(chromeCastPublishId);
+    cordova.plugins.CordovaChromeCastRemoteDisplay.startCast(publishId); 
+	// this will show the selection screen and casting will start after selection
+	// you need to have a published chrome cast remote display app. See https://developers.google.com/cast/docs/registration
 
-	pickedSession = sessions[x];
-
-    cordova.chromeCastRemoteDisplay.startCast(pickedSession);
-	cordova.chromeCastRemoteDisplay.endCast(pickedSession);
-
+	cordova.plugins.CordovaChromeCastRemoteDisplay.endCast();
+	// end the cast
+	
 
 LICENSE
 --------

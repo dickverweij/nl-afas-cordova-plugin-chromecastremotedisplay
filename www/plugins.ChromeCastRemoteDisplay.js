@@ -36,6 +36,6 @@ ChromeCastRemoteDisplay.prototype.endCast = function () {
     });
 };
 
-modelue.exprots = new ChromeCastRemoteDisplay();
+module.exports = new ChromeCastRemoteDisplay();
 
 

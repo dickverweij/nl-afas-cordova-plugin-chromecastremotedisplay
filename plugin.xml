@@ -31,7 +31,7 @@
       <framework src="Accelerate.framework" />
       <framework src="libz.tbd" />
       <framework src="libsqlite3.tbd" />
-      <framework src="libstd++.tbd" />
+      <framework src="libstdc++.tbd" />
       <framework src="SystemConfiguration.framework" />
       <framework src="MediaPlayer.framework" />
       <framework src="CFNetwork.framework" />

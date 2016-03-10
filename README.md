@@ -4,12 +4,25 @@ This plugin will cast your cordova app to a chromecast
 
 Requirements
 -------------
-- iOS 6 or higher
+- iOS 8 or higher
 - Cordova 3.0 or higher
 
     Installation
 -------------
     cordova plugin add nl-afas-cordova-plugin-chromecastremotedisplay
+
+	(assuming you installed cocoapods)
+
+	add a "Podfile" to your platforms/ios folder with following contents:
+
+	-----------------
+	platform :ios, '8.0'
+	
+	pod 'google-cast-sdk'
+	pod 'google-cast-remote-display-sdk'
+	-----------------
+
+	run "pod install"
 
 
 

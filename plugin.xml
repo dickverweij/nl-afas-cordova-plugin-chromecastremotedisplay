@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="nl-afas-cordova-plugin-chromecastremotedisplay" version="0.0.1">
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="nl-afas-cordova-plugin-chromecastremotedisplay" version="0.1.0">
 
     <name>Chomecast Remote display plugin</name>
     <description>Chomecast Remote display plugin</description>
@@ -26,7 +26,18 @@
         <header-file src="src/ios/ChromecastDeviceController.h" />       
         <source-file src="src/ios/DeviceTableViewController.m" />
         <header-file src="src/ios/DeviceTableViewController.h" />               
-        <source-file src="src/ios/CastComponents.storyboard" />       
+        <resource-file src="src/ios/CastComponents.storyboard" />
+
+      <framework src="Accelerate.framework" />
+      <framework src="libz.tbd" />
+      <framework src="libsqlite3.tbd" />
+      <framework src="libstd++.tbd" />
+      <framework src="SystemConfiguration.framework" />
+      <framework src="MediaPlayer.framework" />
+      <framework src="CFNetwork.framework" />
+      <framework src="CoreBluetooth.framework" />
+      <framework src="GoogleCastRemoteDisplay.framework" />
+      <framework src="GoogleCast.framework" />
     </platform>
 
 	

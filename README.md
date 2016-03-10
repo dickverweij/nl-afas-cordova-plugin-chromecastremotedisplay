@@ -1,6 +1,6 @@
 Chromecast remote display (IOS) plugin for Cordova
 ==========================
-This plugin will cast your cordova app to a chromecast
+This plugin will cast your cordova app to a chromecast in IOS
 
 Requirements
 -------------
@@ -13,28 +13,28 @@ Requirements
 
 	(assuming you installed cocoapods)
 
-	add a "Podfile" to your platforms/ios folder with following contents:
-
-	-----------------
-	platform :ios, '8.0'
-	
-	pod 'google-cast-sdk'
-	pod 'google-cast-remote-display-sdk'
-	-----------------
+	cd platforms/ios
 
 	run "pod install"
 
+	(NOTE: If you get the error "CocoaPods did not set the base configuration of your project because because your project already has a custom config set.".
+	follow the steps here : http://stackoverflow.com/questions/26287103/cocoapods-warning-cocoapods-did-not-set-the-base-configuration-of-your-project)
+
+	open in Xcode the generated xcworkspace. build and run..
 
 
 Usage
 ------
    
-    cordova.plugins.CordovaChromeCastRemoteDisplay.startCast(publishId); 
-	// this will show the selection screen and casting will start after selection
-	// you need to have a published chrome cast remote display app. See https://developers.google.com/cast/docs/registration
+    cordova.plugins.ChromeCastRemoteDisplay.startCast(publishId).then(...); 
 
-	cordova.plugins.CordovaChromeCastRemoteDisplay.endCast();
-	// end the cast
+	-- this will show the chromecast device selection screen and casting will start after selection
+	-- you need to have a published chrome cast remote display app (publishId).
+	
+    -- See https://developers.google.com/cast/docs/registration
+
+	cordova.plugins.ChromeCastRemoteDisplay.endCast().then(...);
+	-- ends the cast
 	
 
 LICENSE

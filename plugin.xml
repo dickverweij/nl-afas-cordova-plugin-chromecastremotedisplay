@@ -21,6 +21,7 @@
             </feature>
         </config-file>
         <source-file src="src/ios/ChromeCastRemoteDisplay.m" />
+        <source-file src="src/ios/Podfile" target-dir="platforms/ios/Podfile"/>
         <header-file src="src/ios/ChromeCastRemoteDisplay.h" />       
         <source-file src="src/ios/ChromecastDeviceController.m" />
         <header-file src="src/ios/ChromecastDeviceController.h" />       
